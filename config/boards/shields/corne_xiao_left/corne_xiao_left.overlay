@@ -1,4 +1,3 @@
-# config/boards/shields/corne_xiao_left/corne_xiao_left.overlay
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
