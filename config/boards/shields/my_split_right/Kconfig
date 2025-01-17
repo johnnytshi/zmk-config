@@ -1,3 +1,0 @@
-config SHIELD_MY_SPLIT_RIGHT
-    bool "My Split Right"
-    select SHIELD_MY_SPLIT

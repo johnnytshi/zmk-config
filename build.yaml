@@ -1,12 +1,7 @@
+board: ["seeeduino_xiao_ble"]
+shield: ["corne_xiao_left", "corne_xiao_right"]
 include:
   - board: seeeduino_xiao_ble
-    shield: my_split_left
-    config: config/my_split_left.conf
-    keymap: config/my_split_left.keymap
-    output: build/my_split_left
-
+    shield: corne_xiao_left
   - board: seeeduino_xiao_ble
-    shield: my_split_right
-    config: config/my_split_right.conf
-    keymap: config/my_split_right.keymap
-    output: build/my_split_right
+    shield: corne_xiao_right
