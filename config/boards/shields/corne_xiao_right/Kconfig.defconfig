@@ -5,8 +5,5 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT
     default y
-    
-config ZMK_SPLIT_BLE
-    default y
 
 endif
