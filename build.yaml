@@ -1,7 +1,7 @@
 board: ["seeeduino_xiao_ble"]
-shield: ["corne_xiao_left", "corne_xiao_right"]
+shield: ["chipper_left", "chipper_right"]
 include:
   - board: seeeduino_xiao_ble
-    shield: corne_xiao_left
+    shield: chipper_left
   - board: seeeduino_xiao_ble
-    shield: corne_xiao_right
+    shield: chipper_right

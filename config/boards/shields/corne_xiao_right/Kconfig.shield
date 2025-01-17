@@ -1,2 +1,0 @@
-config SHIELD_CORNE_XIAO_RIGHT
-    def_bool $(shields_list_contains,corne_xiao_right)
