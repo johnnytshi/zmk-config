@@ -1,3 +1,4 @@
+# config/boards/shields/corne_xiao_left/corne_xiao_left.overlay
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
@@ -22,6 +23,8 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "row2col";
+        poll-period-ms = <20>;
+        debounce-period-ms = <20>;
 
         col-gpios
             = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // col0 - PA02/D0
