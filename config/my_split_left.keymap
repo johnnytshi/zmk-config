@@ -4,13 +4,8 @@
 
         default_layer {
             bindings = <
-                /* Left half: positions 0..5 */
                 &kp Q  &kp W  &kp E
                 &kp A  &kp S  &kp D
-
-                /* Right half: positions 6..11 */
-                &kp R  &kp T  &kp Y
-                &kp F  &kp G  &kp H
             >;
         };
     };

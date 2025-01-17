@@ -1,16 +1,12 @@
-jobs:
-  - name: left
-    board: seeed_xiao_ble_nrf52840
-    shield:
-      - my_split_left
-    config:
-      - prj.conf
-    output: build/left
+include:
+  - board: seeed_xiao_ble_nrf52840
+    shield: my_split_left
+    config: config/my_split_left.conf
+    keymap: config/my_split_left.keymap
+    output: build/my_split_left
 
-  - name: right
-    board: seeed_xiao_ble_nrf52840
-    shield:
-      - my_split_right
-    config:
-      - prj.conf
-    output: build/right
+  - board: seeed_xiao_ble_nrf52840
+    shield: my_split_right
+    config: config/my_split_right.conf
+    keymap: config/my_split_right.keymap
+    output: build/my_split_right
