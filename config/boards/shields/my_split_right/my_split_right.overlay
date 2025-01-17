@@ -1,0 +1,38 @@
+/ {
+    kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN_RIGHT";
+
+        /*
+         * Example pins for right half: 
+         * 2 rows, 3 columns.
+         */
+        row-gpios = <
+            &gpio0 8  GPIO_ACTIVE_LOW
+            &gpio0 9  GPIO_ACTIVE_LOW
+        >;
+        col-gpios = <
+            &gpio1 10 GPIO_ACTIVE_LOW
+            &gpio1 11 GPIO_ACTIVE_LOW
+            &gpio1 12 GPIO_ACTIVE_LOW
+        >;
+
+        diode-direction = "ROW2COL";
+
+        polling-delay-ms = <1>;
+        debounce-press-ms = <5>;
+        debounce-release-ms = <5>;
+    };
+};
+
+/ {
+    chosen {
+        zmk,kscan = &kscan_right;
+    };
+
+    /*
+     * This half covers positions [6..11],
+     * so offset = 6.
+     */
+    zmk,position-offset = <6>;
+};

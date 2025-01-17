@@ -1,0 +1,43 @@
+/ {
+    kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN_LEFT";
+
+        /*
+         * Example pins for left half: 
+         * 2 rows, 3 columns. 
+         * Adjust to match your actual nRF52840 pin references
+         * (e.g. P0.xx, P1.xx).
+         */
+        row-gpios = <
+            &gpio0 2  GPIO_ACTIVE_LOW
+            &gpio0 3  GPIO_ACTIVE_LOW
+        >;
+        col-gpios = <
+            &gpio1 5  GPIO_ACTIVE_LOW
+            &gpio1 6  GPIO_ACTIVE_LOW
+            &gpio1 7  GPIO_ACTIVE_LOW
+        >;
+
+        /*
+         * Diodes oriented row->column
+         */
+        diode-direction = "ROW2COL";
+
+        polling-delay-ms = <1>;
+        debounce-press-ms = <5>;
+        debounce-release-ms = <5>;
+    };
+};
+
+/ {
+    chosen {
+        zmk,kscan = &kscan_left;
+    };
+
+    /*
+     * This half covers positions [0..5],
+     * so offset = 0.
+     */
+    zmk,position-offset = <0>;
+};
